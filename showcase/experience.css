@@ -1,0 +1,119 @@
+.experience-content {
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #263238 0%, #455a64 50%, #b0bec5 100%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00acc1;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.job {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.job h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00acc1;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    font-size: 16px;
+    color: #eceff1;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #b0bec5;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.job ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    color: #eceff1;
+}
+
+.job ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.job ul li::before {
+    content: '➤';
+    color: #00acc1;
+    position: absolute;
+    left: 0;
+}
+
+.sub-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00acc1;
+    margin: 15px 0 10px;
+    text-transform: uppercase;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .job {
+        padding: 20px;
+    }
+
+    .job h3 {
+        font-size: 20px;
+    }
+}

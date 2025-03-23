@@ -1,0 +1,113 @@
+.contact-content {
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #263238 0%, #455a64 50%, #b0bec5 100%);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00acc1;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #eceff1;
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #00acc1;
+    width: auto;
+    height: auto;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+/* New styles for email display and link */
+.email-display {
+    color: #eceff1; /* Match the text color */
+    margin-right: 5px;
+}
+
+.email-link {
+    color: #00acc1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-link:hover {
+    color: #00838f; /* Darker cyan on hover */
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-item {
+        font-size: 16px;
+    }
+
+    .contact-icon {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+
+    .email-display {
+        display: block; /* Stack on mobile for better readability */
+        margin-bottom: 5px;
+    }
+
+    .email-link {
+        font-size: 14px;
+    }
+}

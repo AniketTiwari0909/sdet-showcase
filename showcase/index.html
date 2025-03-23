@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2Lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" id="home-link">
+                <img src="../showcase/profileImage.jpeg" alt="Profile Photo" class="profile-photo">
+                <h1>Aniket Tiwari</h1>
+                <p class="title">Software Development Engineer in Test</p>
+            </a>
+            <div class=".linkedin-link a::before">
+                <a href="https://www.linkedin.com/in/aniket-tiwari-08159a181/" target="_blank" rel="noopener noreferrer">
+                    <span>LinkedIn Profile</span>
+                </a>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" id="about-btn">About</a></li>
+                <li><a href="#" id="experience-btn">Experience</a></li>
+                <li><a href="#" id="skills-btn">Skills & Tools</a></li>
+                <li><a href="#" id="projects-btn">Projects</a></li>
+                <li><a href="#" id="certificates-btn">Certificates</a></li>
+                <li><a href="#" id="contact-btn">Contact</a></li>
+                <li><a href="#" id="bug-zapper-btn">Bug Zapper</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hamburger Button -->
+    <button class="toggle-btn" id="toggle-btn" aria-label="Toggle Sidebar">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+    </button>
+
+    <!-- Main Content Area -->
+    <div class="main-content" id="main-content">
+        <div class="loader" id="loader">Loading...</div>
+        <section id="home-section" class="content-section"></section>
+        <section id="about-section" class="content-section"></section>
+        <section id="about-section" class="content-section"></section>
+        <section id="skills-section" class="content-section"></section>
+        <section id="projects-section" class="content-section"></section>
+        <section id="contact-section" class="content-section"></section>
+        <section id="experience-section" class="content-section"></section>
+        <section id="certificates-section" class="content-section"></section>
+        <section id="bug-zapper-section" class="content-section"></section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Aniket Tiwari. All rights reserved.</p>
+            <div class="icon-attribution">
+                <p>Icons: 
+                    <a href="https://www.flaticon.com/free-icons/automation" title="automation icons">Automation icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/performance" title="performance icons">Performance icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/collaboration" title="collaboration icons">Collaboration icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/api" title="api icons">API Testing icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/bug" title="bug icons">Defect Management icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/customer-support" title="customer support icons">Customer Support icons by Freepik</a>, 
+                    <a href="https://www.flaticon.com/free-icons/browser" title="browser icons">Cross-Browser Testing icons by Freepik</a>,
+                    <a href="https://www.flaticon.com/free-icons/commit-git" title="browser icons">Cross-Browser Testing icons by Freepik</a> 
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9245f595588a452b',t:'MTc0MjY0OTM0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

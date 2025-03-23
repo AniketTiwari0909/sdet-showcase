@@ -1,0 +1,104 @@
+.skills-content {
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #263238 0%, #455a64 50%, #b0bec5 100%);
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00acc1;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skills-card, .tools-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card:hover, .tools-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00acc1;
+    margin-bottom: 20px;
+}
+
+.skills-list, .tools-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2;
+    color: #eceff1;
+}
+
+.skills-list li, .tools-list li {
+    position: relative;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.skills-list li::before, .tools-list li::before {
+    content: '✔';
+    color: #00acc1;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.skills-list li:hover, .tools-list li:hover {
+    color: #00acc1;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-card, .tools-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}

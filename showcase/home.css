@@ -1,0 +1,265 @@
+/* General Styling */
+.home-content {
+    padding: 60px 30px 100px; /* Added extra padding-bottom to leave space for footer */
+    background: linear-gradient(135deg, #263238 0%, #455a64 50%, #b0bec5 100%);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Other existing styles */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    color: #eceff1;
+}
+
+.hero-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #00acc1;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 40px 0;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #00acc1;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Other existing styles */
+.highlight-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.highlight-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.highlight-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #eceff1;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #b0bec5;
+}
+
+/* Floating Background Text */
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Other existing styles */
+.floating-bg span {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.15);
+    font-weight: 400;
+    text-transform: uppercase;
+    animation: float 15s infinite ease-in-out, drift 30s infinite linear;
+    white-space: nowrap;
+}
+
+/* Randomize positions and animation delays */
+.floating-bg span:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.floating-bg span:nth-child(2) { top: 20%; left: 60%; animation-delay: 1s; }
+.floating-bg span:nth-child(3) { top: 30%; left: 30%; animation-delay: 2s; }
+.floating-bg span:nth-child(4) { top: 40%; left: 80%; animation-delay: 3s; }
+.floating-bg span:nth-child(5) { top: 50%; left: 15%; animation-delay: 4s; }
+.floating-bg span:nth-child(6) { top: 60%; left: 70%; animation-delay: 5s; }
+.floating-bg span:nth-child(7) { top: 70%; left: 40%; animation-delay: 6s; }
+.floating-bg span:nth-child(8) { top: 80%; left: 90%; animation-delay: 7s; }
+.floating-bg span:nth-child(9) { top: 90%; left: 25%; animation-delay: 8s; }
+.floating-bg span:nth-child(10) { top: 25%; left: 50%; animation-delay: 9s; }
+.floating-bg span:nth-child(11) { top: 15%; left: 35%; animation-delay: 0s; }
+.floating-bg span:nth-child(12) { top: 35%; left: 65%; animation-delay: 1s; }
+.floating-bg span:nth-child(13) { top: 45%; left: 20%; animation-delay: 2s; }
+.floating-bg span:nth-child(14) { top: 55%; left: 85%; animation-delay: 3s; }
+.floating-bg span:nth-child(15) { top: 65%; left: 10%; animation-delay: 4s; }
+.floating-bg span:nth-child(16) { top: 75%; left: 55%; animation-delay: 5s; }
+.floating-bg span:nth-child(17) { top: 85%; left: 30%; animation-delay: 6s; }
+.floating-bg span:nth-child(18) { top: 95%; left: 70%; animation-delay: 7s; }
+.floating-bg span:nth-child(19) { top: 20%; left: 90%; animation-delay: 8s; }
+.floating-bg span:nth-child(20) { top: 40%; left: 45%; animation-delay: 9s; }
+
+/* Floating Animation (Up and Down) */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.15;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.1;
+    }
+}
+
+/* Drifting Animation (Side to Side) */
+@keyframes drift {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Ensure other content stays above */
+.hero-section, .highlights {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .highlight-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .highlight-card h3 {
+        font-size: 20px;
+    }
+
+    .highlight-card p {
+        font-size: 14px;
+    }
+
+    .floating-bg span {
+        font-size: 16px;
+    }
+}

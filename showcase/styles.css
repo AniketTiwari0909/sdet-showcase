@@ -1,0 +1,301 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: #1b2526; /* Solid dark color */
+    color: #eceff1;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    padding: 40px 20px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 4px solid #00acc1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    animation: fadeIn 1s ease-in-out; /* Add load animation */
+}
+
+.sidebar-header:hover .profile-photo {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 172, 193, 0.5); /* Cyan glow */
+}
+
+.sidebar-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.sidebar-header .title {
+    font-size: 16px;
+    font-weight: 300;
+    color: #b0bec5;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin: 30px 0;
+}
+
+.sidebar-nav ul li a {
+    color: #eceff1;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-nav ul li a.active {
+    background: rgba(0, 172, 193, 0.3);
+    transform: translateX(10px);
+}
+
+.sidebar-nav ul li a:hover {
+    background: rgba(0, 172, 193, 0.2); /* Cyan overlay */
+    transform: translateX(10px);
+}
+
+.sidebar-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #00acc1; /* Cyan underline */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hamburger Button */
+.toggle-btn {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background: #00acc1; /* Cyan background */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.toggle-btn:hover {
+    background: #00838f; /* Darker cyan on hover */
+    transform: rotate(90deg);
+}
+
+.hamburger-bar {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.toggle-btn.active .hamburger-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.toggle-btn.active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-btn.active .hamburger-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Main Content */
+.main-content {
+    transition: margin-left 0.4s ease;
+    min-height: calc(100vh - 60px); /* Adjust based on footer height */
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+
+.main-content.shifted {
+    margin-left: 280px;
+}
+
+/* Section Styling */
+.content-section {
+    min-height: 100vh;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+/* Footer Styles */
+footer {
+    background: #263238;
+    padding: 20px 0;
+    text-align: center;
+    color: #b0bec5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Changed from absolute to relative */
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+footer a {
+    color: #00acc1;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 240px;
+        left: -240px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar-header h1 {
+        font-size: 24px;
+    }
+
+    .sidebar-nav ul li a {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    .main-content.shifted {
+        margin-left: 240px;
+    }
+
+    .toggle-btn {
+        width: 45px;
+        height: 45px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .hamburger-bar {
+        width: 25px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.linkedin-link a::before {
+    content: '\f0e1'; /* Unicode for LinkedIn icon from FontAwesome */
+    font-family: 'FontAwesome'; /* Requires FontAwesome to be included */
+    margin-right: 8px;
+    font-size: 18px;
+    color: #00acc1;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-link a:hover::before {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.icon-attribution {
+    display: none;
+}
+
+/* Add at the end of styles.css */
+.loader {
+    display: none;
+    color: #00acc1;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader.active {
+    display: block;
+}
+
+/* Optional: Add a spinning animation */
+.loader::after {
+    content: " ⏳"; /* Unicode hourglass or use a CSS spinner */
+}
+
+/* Add to the end of styles.css */
+#bug-zapper-section {
+    position: relative;
+    overflow: hidden; /* Ensure animations don’t overflow */
+}

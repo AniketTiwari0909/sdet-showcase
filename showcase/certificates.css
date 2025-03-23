@@ -1,0 +1,115 @@
+/* General Styling */
+.certificates-content {
+    padding: 60px 30px;
+    background: linear-gradient(135deg, #263238 0%, #455a64 50%, #b0bec5 100%);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    color: #eceff1;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00acc1;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Certificate Card */
+.certificate-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.certificate-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #00acc1;
+    margin-bottom: 10px;
+}
+
+.certificate-card .issuer {
+    font-size: 16px;
+    font-weight: 400;
+    color: #b0bec5;
+    margin-bottom: 5px;
+}
+
+.certificate-card .issue-date {
+    font-size: 16px;
+    font-weight: 400;
+    color: #eceff1;
+    margin-bottom: 5px;
+}
+
+.certificate-card .credential-id {
+    font-size: 14px;
+    font-weight: 400;
+    color: #b0bec5;
+    margin-bottom: 5px;
+}
+
+.certificate-card .skills {
+    font-size: 14px;
+    font-weight: 400;
+    color: #eceff1;
+    margin-bottom: 0;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .certificate-card {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .certificate-card h3 {
+        font-size: 20px;
+    }
+
+    .certificate-card .issuer,
+    .certificate-card .issue-date,
+    .certificate-card .credential-id,
+    .certificate-card .skills {
+        font-size: 14px;
+    }
+}
